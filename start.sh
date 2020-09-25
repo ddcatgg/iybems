@@ -1,7 +1,7 @@
 #!/bin/sh
 appname=ddgg-ibmyes
 rsize=256
-cd gogogo
+cd get-started-python
 ibmcloud target --cf
 ibmcloud cf push
 ibmyuming=$(ibmcloud app show $appname | grep h |awk '{print $2}'| awk -F: 'NR==2{print}')
