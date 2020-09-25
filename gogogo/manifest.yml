@@ -1,7 +1,6 @@
 ---
 applications:
- - path: .
-   name: ddgg-ibmyes
-   command: python3 -m pip
+ - name: ddgg-ibmyes
+   command: python3 -m pip list
    random-route: true
    memory: 256M
