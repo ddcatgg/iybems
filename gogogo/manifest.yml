@@ -1,7 +1,6 @@
 ---
 applications:
  - path: .
-   command: python3 hello.py
    name: ddgg-ibmyes
    random-route: true
    memory: 256M
