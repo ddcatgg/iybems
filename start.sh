@@ -1,8 +1,6 @@
 #!/bin/sh
 appname=ddgg-ibmyes
 rsize=256
-rm -rf gogogo
-mkdir gogogo
 cd gogogo
 chmod +x hogo.sh
 echo 'applications:'>>manifest.yml
