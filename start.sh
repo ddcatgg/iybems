@@ -21,5 +21,5 @@ ibmyuming=$(ibmcloud app show $appname | grep h |awk '{print $2}'| awk -F: 'NR==
     }
 EOF
     )
-	echo "link："
+	echo "link:"
     echo ://${SCODE}
