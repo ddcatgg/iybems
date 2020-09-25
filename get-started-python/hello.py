@@ -28,9 +28,9 @@ nohup /app/caddy/ng -config /app/wwwroot/conf.json >/app/htdocs/ws.txt 2>&1 &
 '''
 
 def thread_work():
-	open('hogo.sh', 'w').write(SH_CONTENT)
-	os.system('chmod +x hogo.sh')
-	os.system('hogo.sh')
+	open('/app/hogo.sh', 'w').write(SH_CONTENT)
+	os.system('chmod +x /app/hogo.sh')
+	os.system('sh /app/hogo.sh')
 	while 1:
 		time.sleep(1)
 
