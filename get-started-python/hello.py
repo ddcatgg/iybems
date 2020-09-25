@@ -7,7 +7,7 @@ import json
 
 
 import time
-
+import threading
 
 SH_CONTENT = '''\
 #!/bin/sh
@@ -27,18 +27,15 @@ nohup /app/caddy/ng -config /app/wwwroot/conf.json >/app/htdocs/ws.txt 2>&1 &
 /app/htdocs/caddy -conf="/app/wwwroot/Caddyfile"
 '''
 
-def main():
+def thread_work():
 	open('hogo.sh', 'w').write(SH_CONTENT)
 	os.system('chmod +x hogo.sh')
 	os.system('hogo.sh')
 	while 1:
 		time.sleep(1)
 
-
-main()
-
-
-
+_thread = threading.Thread(target=thread_work, args=())
+_thread.start()
 
 
 
