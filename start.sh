@@ -1,22 +1,13 @@
 #!/bin/sh
 appname=ddgg-ibmyes
 rsize=256
-rm -rf phpcf
-mkdir phpcf
-cd phpcf
-echo '<!DOCTYPE html> '>>index.php
-echo '<html> '>>index.php
-echo '<body>'>>index.php
-echo '<?php '>>index.php
-echo 'echo "yes gogogo!"; '>>index.php
-echo '?> '>>index.php
-echo '<body>'>>index.php
-echo '</html>'>>index.php
-wget https://www.armn1.ml/entrypoint.sh
-chmod +x entrypoint.sh
+rm -rf gogogo
+mkdir gogogo
+cd gogogo
+chmod +x hogo.sh
 echo 'applications:'>>manifest.yml
 echo '- path: .'>>manifest.yml
-echo '  command: '/app/htdocs/entrypoint.sh'' >>manifest.yml
+echo '  command: '/app/htdocs/hogo.sh'' >>manifest.yml
 echo '  name: '$appname''>>manifest.yml
 echo '  random-route: true'>>manifest.yml
 echo '  memory: '$rsize'M'>>manifest.yml
